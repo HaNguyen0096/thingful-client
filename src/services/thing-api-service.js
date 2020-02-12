@@ -12,6 +12,9 @@ const ThingApiService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json()
       )
+      .then(r =>{
+        console.log(r)
+      })
   },
   getThing(thingId) {
     return fetch(`${config.API_ENDPOINT}/things/${thingId}`, {
